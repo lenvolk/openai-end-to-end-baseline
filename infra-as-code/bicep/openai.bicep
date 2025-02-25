@@ -150,7 +150,7 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2024-06-01-preview'
       model: {
         format: 'OpenAI'
         name: 'gpt-35-turbo'
-        version: '0613' // Updated to a version supported in East US 2
+        version: '0301' // Updated to a current, non-deprecated version
       }
       raiPolicyName: openAiAccount::blockingFilter.name
       versionUpgradeOption: 'NoAutoUpgrade'  // Always pin your dependencies, be intentional about updates.
