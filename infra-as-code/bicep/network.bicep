@@ -19,7 +19,7 @@ var jumpboxSubnetPrefix = '10.0.2.128/28'
 var trainingSubnetPrefix = '10.0.3.0/24'
 var scoringSubnetPrefix = '10.0.4.0/24'
 
-var enableDdosProtection = true
+var enableDdosProtection = false
 
 // ---- Networking resources ----
 
