@@ -158,12 +158,12 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2024-04-01' = {
   location: location
   kind: 'linux'
   sku: {
-    name: 'P1V3' // Some subscriptions do not have quota to premium web apps. If you encounter an error, request quota or to unblock yourself use 'S1' and set 'zoneRedundant' to 'false.'
+    name: 'S1' // Some subscriptions do not have quota to premium web apps. If you encounter an error, request quota or to unblock yourself use 'S1' and set 'zoneRedundant' to 'false.'
                  // az appservice list-locations --linux-workers-enabled --sku P1V3
     capacity: 3
   }
   properties: {
-    zoneRedundant: true // Some subscriptions do not have quota to support zone redundancy. If you encounter an error, set this to false.
+    zoneRedundant: false // Some subscriptions do not have quota to support zone redundancy. If you encounter an error, set this to false.
     reserved: true
   }
 }
