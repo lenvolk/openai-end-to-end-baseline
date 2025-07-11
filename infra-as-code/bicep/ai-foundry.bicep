@@ -174,9 +174,6 @@ resource aiFoundryPrivateEndpoint 'Microsoft.Network/privateEndpoints@2024-05-01
       ]
     }
   }
-  dependsOn: [
-    model
-  ]
 }
 
 // Azure diagnostics
