@@ -145,6 +145,9 @@ resource aiFoundryPrivateEndpoint 'Microsoft.Network/privateEndpoints@2024-05-01
       }
     ]
   }
+  dependsOn: [
+    aiFoundry::model  // Helps ensure the AI Foundry Account is stabilized before the private endpoint deployment is attempted.
+  ]
 
   resource dnsGroup 'privateDnsZoneGroups' = {
     name: 'aifoundry'
